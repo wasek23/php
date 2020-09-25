@@ -1,0 +1,15 @@
+<?php
+// Autoload
+spl_autoload_register(function($className){
+    $file = __DIR__ .'/classes/'. $className .'.php';
+    if(file_exists($file)){
+        require $file;
+    }else{
+        echo "File/Some File Not Found";
+    }
+});
+new Name;
+echo '<br/>';
+new Age;
+echo '<br/>';
+new Work;
